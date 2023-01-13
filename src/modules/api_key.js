@@ -1,4 +1,4 @@
-const key = ''; // copy paste you key inside '', example is const key = '1RjuQJrVTvT45Mcm7X6n';
+const key = 'ijbk4Yf3rCPbt7WMXuGI';
 
 function keyfunction() {
   return key;
