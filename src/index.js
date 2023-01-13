@@ -16,6 +16,7 @@ const popup = document.querySelector('.pop-up');
 const closebutton = document.querySelector('.closebutton');
 const popupContentLoad = document.querySelector('.popupContentLoad');
 const popupCommentButton = document.querySelector('.popupCommentButton');
+const input = document.querySelector('.input');
 const inputname = document.querySelector('.inputname');
 const textarea = document.querySelector('.textarea');
 const commentsload = document.querySelector('.commentsload');
@@ -41,7 +42,7 @@ id.forEach((movie) => {
         <p class="likesnumber">No. of likes are: ${nooflikes}</p>
       </div>
     </section>
-    <button class="comment-button">Comment</button></div>`;
+    <button class="comment-button">Comments</button></div>`;
   });
 });
 let ID = '';
@@ -49,9 +50,13 @@ let commentCounter = 0;
 let itemCounter = 0;
 function openPopUp() {
   popup.classList.add('open');
+  popup.style.display = 'flex';
+  input.style.display = 'flex';
 }
 function closePopUp() {
   popup.classList.remove('open');
+  popup.style.display = 'none';
+  input.style.display = 'none';
 }
 
 setTimeout(async () => {
@@ -77,7 +82,7 @@ movies.addEventListener('click', async (e) => {
       countercomment.innerHTML = `( ${commentCounter} )`;
     });
   }
-  if (e.target.classList.contains('like')) {
+  if (e.target.classList.contains('like-button')) {
     await addlike({
       item_id: ID,
     }, key);
