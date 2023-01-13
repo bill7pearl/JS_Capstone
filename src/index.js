@@ -82,7 +82,7 @@ movies.addEventListener('click', async (e) => {
       countercomment.innerHTML = `( ${commentCounter} )`;
     });
   }
-  if (e.target.classList.contains('like-button')) {
+  if (e.target.classList.contains('like')) {
     await addlike({
       item_id: ID,
     }, key);
@@ -95,6 +95,7 @@ movies.addEventListener('click', async (e) => {
     e.target.parentElement.parentElement.innerHTML = `<button id="${ID}" class="like-button"><i class="fa-regular fa-heart like"></i></button>
     <p class="likesnumber">No. of likes are: ${nooflikes}</p>`;
   }
+  //window.location.reload();
 });
 
 closebutton.addEventListener('click', () => {
