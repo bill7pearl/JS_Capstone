@@ -1,0 +1,165 @@
+/*!*****************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/style.css ***!
+  \*****************************************************************/
+* {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: beige;
+}
+
+h2 {
+    text-align: center;
+}
+
+.pop-up {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(8, 19, 43, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  justify-content: center;
+}
+
+.open {
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    gap: 10px;
+    padding: 30px;
+    position: relative;
+    color: #fff;
+}
+
+.movies-div {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
+.movie-title {
+    text-align: center;
+}
+
+.firstline {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+}
+
+.secondline {
+    color: black;
+}
+
+.countercomment {
+    color: black;
+}
+
+.commentsload {
+    color: black;
+}
+
+.closebutton {
+    font-size: xx-large;
+    position: fixed;
+    right: 10%;
+    cursor: pointer;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 20px;
+    height: 20px;
+    width: 90%;
+    background-color: #fff;
+}
+
+.nav-container {
+    display: flex;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.movie-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.movie-img {
+    border-radius: 10px;
+    padding: 20px;
+    flex-basis: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.likeContainer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.like-button {
+    border: none;
+    background: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.comment-button {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.addnewComment {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+}
+
+footer {
+text-align: center;
+    margin: 10px auto;
+    padding: 20px;
+    height: 20px;
+    width: 90%;
+    background-color: #fff;
+}
+
+
+/*# sourceMappingURL=bundle.css.map*/
