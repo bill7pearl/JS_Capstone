@@ -7,10 +7,10 @@
 </div>
 
 # 🚀 Live Demo:
-- 
+- https://bill7pearl.github.io/JS_Capstone/
 
 # Presentation Video:
-- 
+- https://www.loom.com/share/315d572fbbef46fc89fb85875c0b75fb
 
 - [📗 Table of Contents](#-table-of-contents)
 - [📖 Todo LIst ](#-Capstone-JS-)
