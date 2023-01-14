@@ -1,5 +1,12 @@
 <a name="readme-top"></a>
+<div align="center">
 
+  <img src="UIapi.png" alt="logo" width="140"  height="auto" />
+  <br/>
+
+  <h3><b>App UI Sample</b></h3>
+
+</div>
 # 🚀 Live Demo:
 - https://bill7pearl.github.io/JS_Capstone/
 
