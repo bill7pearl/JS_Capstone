@@ -1,7 +1,6 @@
-/* eslint-disable import/prefer-default-export */
 const commentsload = document.querySelector('.commentsload');
 
-export const fetchcomment = async (id, key) => {
+const fetchcomment = async (id, key) => {
   commentsload.innerHTML = '';
   await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${key}/comments?item_id=${id}`)
     .then((res) => res.json())
@@ -14,3 +13,4 @@ export const fetchcomment = async (id, key) => {
       });
     });
 };
+export default fetchcomment;
