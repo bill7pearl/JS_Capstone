@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 <div align="center">
 
-  <img src="UIapi.png" alt="logo" width="500"  height="auto" />
+  <img src="UIapi.png" alt="logo" width="700"  height="auto" />
   <br/>
 
   <h3><b>App UI Sample</b></h3>
