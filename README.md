@@ -53,7 +53,7 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- [Live Demo Link](https://bill7pearl.github.io/JS-Capstone/)
+- [Live Demo Link](https://bill7pearl.github.io/JS_Capstone/)
 
 ## 🚀 Presentation video <a name="presentation-video"></a>
 - [Presentation Video Link](https://www.loom.com/share/315d572fbbef46fc89fb85875c0b75fb)
