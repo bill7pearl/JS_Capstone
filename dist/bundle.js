@@ -33,10 +33,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 var key = (0,_modules_api_key_js__WEBPACK_IMPORTED_MODULE_8__["default"])();
 var movies = document.querySelector('.movie-info');
 var id = [1, 2, 3, 4, 5, 6, 7, 8, 9, 99];
-var popup = document.querySelector('.pop-up');
+var popupModal = document.querySelector('.pop-up');
+var popup = document.querySelector('.popupContent');
 var closebutton = document.querySelector('.closebutton');
 var popupContentLoad = document.querySelector('.popupContentLoad');
 var popupCommentButton = document.querySelector('.popupCommentButton');
+var input = document.querySelector('.input');
 var inputname = document.querySelector('.inputname');
 var textarea = document.querySelector('.textarea');
 var commentsload = document.querySelector('.commentsload');
@@ -61,7 +63,7 @@ id.forEach(function (movie) {
                   nooflikes = element.likes;
                 }
               });
-              movies.innerHTML += "<div id=\"".concat(movie, "\" class=\"movie-img\">\n    <img src=\"").concat(res.image.medium, "\">\n    <section class=\"movie-desk\">\n      <p class=\"movie-title\">").concat(res.name, "</p>\n      <div class=\"likeContainer\">\n      <button id=\"").concat(movie, "\" class=\"like-button\"><i class=\"fa-regular fa-heart like\"></i></button>\n        <p class=\"likesnumber\">No. of likes are: ").concat(nooflikes, "</p>\n      </div>\n    </section>\n    <button class=\"comment-button\">Comment</button></div>");
+              movies.innerHTML += "<div id=\"".concat(movie, "\" class=\"movie-img\">\n    <img src=\"").concat(res.image.medium, "\">\n    <section class=\"movie-desk\">\n      <p class=\"movie-title\">").concat(res.name, "</p>\n      <div class=\"likeContainer\">\n      <button id=\"").concat(movie, "\" class=\"like-button\"><span class=\"like\">\uD83D\uDC4D</span></button>\n        <p class=\"likesnumber\">").concat(nooflikes, " likes</p>\n      </div>\n    </section>\n    <button class=\"comment-button\">Comments</button></div>");
             case 6:
             case "end":
               return _context.stop();
@@ -79,9 +81,15 @@ var commentCounter = 0;
 var itemCounter = 0;
 function openPopUp() {
   popup.classList.add('open');
+  popupModal.style.display = 'flex';
+  popup.style.display = 'flex';
+  input.style.display = 'flex';
 }
 function closePopUp() {
   popup.classList.remove('open');
+  popupModal.style.display = 'none';
+  popup.style.display = 'none';
+  input.style.display = 'none';
 }
 setTimeout( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
   return _regeneratorRuntime().wrap(function _callee2$(_context2) {
@@ -116,7 +124,7 @@ movies.addEventListener('click', /*#__PURE__*/function () {
                       switch (_context3.prev = _context3.next) {
                         case 0:
                           openPopUp();
-                          popupContentLoad.innerHTML = "<div>\n      <img id=\"".concat(e.target.parentElement.id, "\" src=\"").concat(res.image.medium, "\"></div>\n      <div class=\"firstline\">\n      <span class=\"firstlineItemone\">Categories: ").concat(res.genres.join(', '), "</span>\n      <span class=\"firstlineItemtwo\">Rating: ").concat(res.rating.average, "</span>\n      </div>\n      <div class=\"secondline\">").concat(res.summary, "\n      </div>");
+                          popupContentLoad.innerHTML = "<div class=\"movies-div\">\n      <img id=\"".concat(e.target.parentElement.id, "\" src=\"").concat(res.image.medium, "\"></div>\n      <div class=\"firstline\">\n      <span class=\"firstlineItemone\">Categories: ").concat(res.genres.join(', '), "</span>\n      <span class=\"firstlineItemtwo\">Rating: ").concat(res.rating.average, "</span>\n      </div>\n      <div class=\"secondline\">").concat(res.summary, "\n      </div>");
                           _context3.next = 4;
                           return (0,_modules_fetchcomment_js__WEBPACK_IMPORTED_MODULE_3__["default"])(ID, key);
                         case 4:
@@ -152,7 +160,7 @@ movies.addEventListener('click', /*#__PURE__*/function () {
                 nooflikes = element.likes;
               }
             });
-            e.target.parentElement.parentElement.innerHTML = "<button id=\"".concat(ID, "\" class=\"like-button\"><i class=\"fa-regular fa-heart like\"></i></button>\n    <p class=\"likesnumber\">No. of likes are: ").concat(nooflikes, "</p>");
+            e.target.parentElement.parentElement.innerHTML = "<button id=\"".concat(ID, "\" class=\"like-button\"><span class=\"like\">\uD83D\uDC4D</span></button>\n    <p class=\"likesnumber\">No. of likes are: ").concat(nooflikes, "</p>");
           case 10:
           case "end":
             return _context4.stop();
@@ -177,7 +185,7 @@ popupCommentButton.addEventListener('click', function () {
   }, key);
   commentsload.innerHTML += "<p><span>Just now ".concat(inputname.value, ": ").concat(textarea.value, "</p>");
   commentCounter = (0,_modules_commentCounter_js__WEBPACK_IMPORTED_MODULE_4__["default"])();
-  countercomment.innerHTML = "( ".concat(commentCounter, " )");
+  countercomment.innerHTML = "comments (".concat(commentCounter, ")");
   inputname.value = '';
   textarea.value = '';
 });
@@ -239,20 +247,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var addcomment = function addcomment(Obj, key) {
-  return fetch("https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/".concat(key, "/comments"), {
-    method: 'POST',
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8'
-    },
-    body: JSON.stringify(Obj)
-  }).then(function (res) {
-    return res;
-  }).then(function (output) {
-    return output;
-  });
+var commentCounterFunction = function commentCounterFunction() {
+  var commentCounter = document.querySelector('.commentsload');
+  var counter = 0;
+  counter = commentCounter.getElementsByTagName('p').length;
+  return counter;
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (addcomment);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (commentCounterFunction);
 
 /***/ }),
 
