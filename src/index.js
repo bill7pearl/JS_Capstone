@@ -49,18 +49,18 @@ id.forEach((movie) => {
 let ID = '';
 let commentCounter = 0;
 let itemCounter = 0;
-function openPopUp() {
+const openPopUp = () => {
   popup.classList.add('open');
   popupModal.style.display = 'flex';
   popup.style.display = 'flex';
   input.style.display = 'flex';
-}
-function closePopUp() {
+};
+const closePopUp = () => {
   popup.classList.remove('open');
   popupModal.style.display = 'none';
   popup.style.display = 'none';
   input.style.display = 'none';
-}
+};
 
 setTimeout(async () => {
   itemCounter = await itemCounterFunction();
